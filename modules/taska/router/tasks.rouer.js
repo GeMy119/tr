@@ -15,6 +15,7 @@ tasksRouter.post("/addTask",checkLoginUser, validation(addTaskSchema),addTask)
 tasksRouter.put("/updateTask/:id", validation(updateTaskSchema), checkLoginUser, chekUserCreateTask, updateTask)
 tasksRouter.delete("/deleteTask/:id", validation(deleteTaskSchema), checkLoginUser, chekUserCreateTask, deleteTask)
 tasksRouter.get("/findAllTasks", checkLoginUser, findAllTasks)
-tasksRouter.get("/tasksDoneAfterDeadline", checkLoginUser, tasksDoneAfterDeadline)
+tasksRouter.get("/tasksDoneAfterDeadline", checkLoginUser, tasksDoneAfterDeadline) 
+
 
 module.exports = tasksRouter;
