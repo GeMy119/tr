@@ -23,7 +23,7 @@ const login = async (req, res) => {
                 }, "gemy")
                 user.isLogin = true
                 await user.save()
-                res.status(statusCodes.OK).json({ message: `welcome ${user.userName}`, token })
+                res.status(statusCodes.OK).json({ message: `welcome`, token })
             }
             else {
                 res.status(statusCodes.BAD_REQUEST).json({ message: "password is incorrect" })
