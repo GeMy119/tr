@@ -7,7 +7,7 @@ module.exports = {
             email: Joi.string().email().required(),
             password: Joi.string().required(),
             age: Joi.number().required(),
-            phone: Joi.string().required(),
+            phone: Joi.number().required(),
             gender: Joi.string().required(),
         })
     },
@@ -27,7 +27,7 @@ module.exports = {
         body: Joi.object().required().keys({
             userName: Joi.string().required(),
             age: Joi.number().required(),
-            phone: Joi.string().required()
+            phone: Joi.number().required()
         })
     }
 }
