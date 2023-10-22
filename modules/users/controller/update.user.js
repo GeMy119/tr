@@ -7,7 +7,7 @@ const updateUser = async (req, res) => {
             age: req.body.age,
             phone:req.body.phone
         }
-        const userId = req.user.id
+        const userId = req.parmas.id
         const userDateUpdated = await User.findByIdAndUpdate(userId, uData, { new: true })
         res.status(statusCodes.OK).json({ message: "user data updated", userDateUpdated })
     } catch (error) {
