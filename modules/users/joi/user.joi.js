@@ -7,7 +7,7 @@ module.exports = {
             email: Joi.string().email().required(),
             password: Joi.string().required(),
             age: Joi.number().required(),
-            phone: Joi.number().required(),
+            phone: Joi.string().required(),
             gender: Joi.string().required(),
         })
     },
@@ -26,7 +26,8 @@ module.exports = {
     updateUserSchema: {
         body: Joi.object().required().keys({
             userName: Joi.string().required(),
-            age: Joi.number().required()
+            age: Joi.number().required(),
+            phone: Joi.string().required()
         })
     }
 }
