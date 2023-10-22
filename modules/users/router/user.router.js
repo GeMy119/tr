@@ -19,7 +19,7 @@ userRouter.put("/updatePassword", validation(changePasswordSchema), checkLoginUs
 userRouter.put("/updateUser/:id", validation(updateUserSchema), updateUser)
 userRouter.put("/softDeleteUser", checkLoginUser, softDeleteUser)
 userRouter.get("/logout", checkLoginUser, logout)
-userRouter.get("/getUser", checkLoginUser, getUser)
+userRouter.get("/getUser/:id", getUser)
 userRouter.get("/verifyUser/:token", verifyUser)
 userRouter.delete("/deleteUser", checkLoginUser, deleteUser)
 
