@@ -4,7 +4,8 @@ const updateUser = async (req, res) => {
     try {
         const uData = {
             userName: req.body.userName,
-            age: req.body.age
+            age: req.body.age,
+            phone:req.body.phone
         }
         const userId = req.user.id
         const userDateUpdated = await User.findByIdAndUpdate(userId, uData, { new: true })
