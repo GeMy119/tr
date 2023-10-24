@@ -27,7 +27,7 @@ const register = async (req, res) => {
                     text: "verify your email", // plain text body
                     html: `<div>
                            <p>click to verify</p>
-                           <a href="http://localhost:5555/verifyUser/${token}">verify</a>
+                           <a href="https://trelloapp.onrender.com/verifyUser/${token}">verify</a>
                            </div>`, // html body
                 });
                 res.status(statusCodes.CREATED).json({ message: "regiterd done" })
