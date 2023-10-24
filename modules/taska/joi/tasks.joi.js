@@ -7,7 +7,7 @@ module.exports = {
             des: Joi.string().required(),
             status: Joi.string(),
             userId: Joi.string(),
-            asignTo: Joi.string().required(),
+            // asignTo: Joi.string().required(),
             deadline: Joi.date().required(),
         })
     },
